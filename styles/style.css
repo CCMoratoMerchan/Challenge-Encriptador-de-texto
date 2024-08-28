@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-primaria: #E5E5E5;
+    --color-secundaria: white;
+    --color-terciaria: #0A3871;
+    --color-hover: #272727;
+    --fuente-inter: 'Inter', 'sans serif';
+}
+
+.header{
+    padding: 20px;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: var(--color-primaria);
+    color: var(--color-terciaria);
+}
+
+.encriptador{
+    padding: 1% 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.encriptador__contenido{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--fuente-inter);
+    width: 60%;
+    padding: 0 10% 0 10%;
+}
+
+
+.encriptador__contenido__area{
+    resize: vertical;
+    overflow-y:auto;
+    border: none;
+    font-family: var(--fuente-inter);
+    font-size: 2rem;
+    background-color: transparent;
+    color: var(--color-terciaria);
+}
+.encriptador__contenido__area::placeholder{
+    color: var(--color-terciaria);
+}
+.encriptador__contenido__area:focus{
+    outline: none;
+}
+
+.encriptador__contenido__funciones{
+    display: flex;
+    gap: 24px;
+}
+
+.encriptador__contenido__funciones__alerta{
+    display: flex;
+    align-content: center;
+    gap: 8px;
+    color: gray;
+    font-family: var(--fuente-inter);
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.encriptador__contenido__funciones__boton__encriptar{
+    background-color: var(--color-terciaria);
+    color: var(--color-secundaria);
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 24px;
+    border: 1px solid var(--color-terciaria);;
+    width: 50%;
+    padding: 24px 0;
+}
+
+.encriptador__contenido__funciones__boton__desencriptar{
+    background-color: var(--color-primaria);
+    color: var(--color-terciaria);
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 24px;
+    border: 1px solid var(--color-terciaria);
+    width: 50%;
+    padding: 24px 0;
+}
+.resultado{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    background-color: var(--color-secundaria);
+    border-radius: 32px;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    padding: 5% 32px 32px 32px;
+    margin: -6% 40px 40px 0;
+    box-shadow: 0 5px 0 0 #0000000a;
+}
+
+.notexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--fuente-inter);
+}
+
+.resultado__notexto__texto{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.resultado__texto{
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    font-family: var(--fuente-inter);
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0 0 0 0;
+    margin: 0 0 20% 0;
+    color: gray;
+}
+.resultado__texto__copiar{
+    justify-content: center;
+    align-content: center;
+    background-color: var(--color-primaria);
+    color: var(--color-terciaria);
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 24px;
+    border: 1px solid var(--color-terciaria);
+    width: 95%;
+    padding: 24px;
+    margin: 2% 0 0 2%;
+    
+}
+
+
+
+.footer{
+    color:var(--color-primaria);
+    width: 100%;
+    background-color: var(--color-terciaria);
+    text-align: center;
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+
+    .header{
+         padding: 5%  
+    }
+    .encriptador{
+        flex-direction: column;
+        padding: 5%;
+
+    }
+    .encriptador__contenido{
+        width: auto;
+        padding: 0;
+        margin: 10px;
+    }
+
+    .encriptador__contenido__funciones__boton__encriptar{
+        background-color: var(--color-terciaria);
+        color: var(--color-secundaria);
+        font-family: var(--fuente-inter);
+        font-size: 1rem;
+        font-weight: 400;
+        border-radius: 24px;
+        border: 1px solid var(--color-terciaria);;
+        width: 50%;
+    }
+    
+    .encriptador__contenido__funciones__boton__desencriptar{
+        width: 50%;
+    }
+
+    .resultado{
+        height: 50%;
+        padding: 0 0 0 0 ;
+        margin: 5% 0 0 0;
+        width: 90%
+
+    }
+
+    .notexto{
+        margin: 0;
+    }
+    
+    .resultado__notexto__img{
+        display: none;
+    }
+    .resultado__notexto{
+        padding: 5px;
+    }
+
+    .resultado__texto{
+        margin: 5%;
+        font-size: 1rem;
+    }
+}

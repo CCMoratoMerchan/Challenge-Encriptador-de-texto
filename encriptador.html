@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-co">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+    <header class="header">
+        <img src ="assets/Logo.png" alt="Logo de Alura Latam">
+    </header>
+    <main class="encriptador">
+        <div class="encriptador__contenido">
+            <textarea id="Entrada" rows="10" class="encriptador__contenido__area" placeholder="Ingrese el texto aquí"></textarea>
+            <p class="encriptador__contenido__funciones__alerta">
+                <img src="./assets/bi--exclamation-circle-fill.svg"> 
+                Solo letras minúsculas y sin acentos 
+            </p>
+            <div class="encriptador__contenido__funciones">
+                <button onclick="encriptar();" class="encriptador__contenido__funciones__boton__encriptar">Encriptar</button>
+                <button onclick="desencriptar();" class="encriptador__contenido__funciones__boton__desencriptar">Desencriptar</button>  
+            </div>
+        </div>
+        <div id="Salida" class="resultado">
+            <div id="notexto" class="notexto">
+                <img class="resultado__notexto__img" src="./assets/Muñeco.png" alt="Muñeco que se encuentra observando con una lupa un diamante">
+                <h2 class="resultado__notexto">Ningún mensaje fue encontrado</h2>
+                <p class="resultado__notexto__texto">
+                Ingresa el texto que desees encriptar o desencriptar.
+                </p>
+            </div>
+            <div id="textoencriptado" class="resultado__texto"></div>
+            <div> <button id="copiar" onclick="copiartexto()" class="resultado__texto__copiar" style="display: none;">Copiar</button></div>
+        </div>
+            
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por CC</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
